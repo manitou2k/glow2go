@@ -1,0 +1,61 @@
+
+//~
+// Apply the `.pagination` class to the `ol` or `ul` element to
+// represent pagination navigation. The list should contain the `.nav` class.
+//
+// Notes:
+// - **Pro Tip** Add `.pagination-center` or `.pagination-right` on the `.pagination` container to change the alignment
+//
+// Usage:
+//    <nav>
+//      <ol class="nav pagination">
+//        <li class="disabled"><a href="#">&laquo;</a></li>
+//        <li><a href="#">1</a></li>
+//        <li class="active"><a href="#">2</a></li>
+//        <li><a href="#" rel="next">3</a></li>
+//        <li class="disabled"><a href="#">&hellip;</a></li>
+//        <li><a href="#">11</a></li>
+//        <li><a href="#">12</a></li>
+//        <li><a href="#">&raquo;</a></li>
+//      </ol>
+//    </nav>
+
+.pagination
+  +clearfixer
+
+.pagination > li
+  float: left
+
+.pagination > li > a
+  background-color: $component_bg
+  border: 1px solid $component_border
+  border-left-width: 0
+  padding: 0.5em 0.75em
+  &:hover
+    background-color: $component_bg_hover
+
+.pagination .active > a,
+.pagination .active > a:hover
+  background-color: $component_bg_active
+  color: $component_active
+
+.pagination .active > a,
+.pagination > li > a:active
+  +box-shadow($inset_dark)
+
+.pagination .disabled > a,
+.pagination .disabled > a:hover
+  background: transparent
+  color: $disabled_color
+
+.pagination > li:first-child > a
+  border-left-width: 1px
+  border-radius: $radii 0 0 $radii
+.pagination > li:last-child > a
+  border-radius: 0 $radii $radii 0
+
+.pagination-center
+  text-align: center
+.pagination-right
+  text-align: right
+

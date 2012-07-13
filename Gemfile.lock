@@ -25,6 +25,14 @@ GIT
       rmagick
       spine-rails (~> 0.1)
 
+GIT
+  remote: git://github.com/modeset/underoos.git
+  revision: 5f2e78e5e53dbc9f412176851267a22510483dc3
+  specs:
+    underoos (1.1.0)
+      rails (>= 3.1.0)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -231,4 +239,5 @@ DEPENDENCIES
   spine-rails
   thin
   uglifier (>= 1.0.3)
+  underoos!
   will_paginate

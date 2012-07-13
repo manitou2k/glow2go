@@ -1,0 +1,72 @@
+
+//~
+// Tool tips utilize [Bootstrap's Tooltip plugin](http://twitter.github.com/bootstrap/javascript.html#tooltips).
+// You can control various options of how a tool tip is shown based on attributes set in the link.
+//
+// Styles are automatically generated based on the inverted colors of the body's
+// `background-color` and font `color`.
+//
+// Tooltips handle positions for
+// <a href="#" rel="tooltip" data-placement="top" title="Top">top</a>,
+// <a href="#" rel="tooltip" data-placement="bottom" title="Bottom">bottom</a>,
+// <a href="#" rel="tooltip" data-placement="left" title="Left">left</a>, or
+// <a href="#" rel="tooltip" data-placement="right" title="Right">right</a>.
+// They require information set on a links data attributes.
+//
+// Attribute          | Values                        | Usage
+// ------------------ | ---------------------------   | ---------------------------
+// `rel`              | `popover`                     | The js identifier for the type of component
+// `data-placement`   | `top`,`bottom`,`left`,`right` | The direction to show based on the target
+// `title`            | _text_                        | The copy for the tooltip
+//
+// Examples:
+//    <a rel="tooltip" data-placement="top" title="Top">Top</a>
+//
+// Notes:
+// - **Heads Up!** Tooltips are opt in and will only be instantiated if called directly from JavaScript `$("a[rel=tooltip]").tooltip()`
+
+.tooltip
+  +font-size(12)
+  +opacity(0)
+  font-weight: bold
+  padding: 5px
+  display: block
+  position: absolute
+  visibility: visible
+  z-index: $zindex_tips
+  &.in
+    +opacity(0.9)
+  &.top
+    margin-top: -2px
+  &.bottom
+    margin-top: 2px
+  &.left
+    margin-left: -2px
+  &.right
+    margin-left: 2px
+  &.top .tooltip-arrow
+    +arrow_south(invert($body_bg))
+    bottom: 0
+    left: 50%
+  &.bottom .tooltip-arrow
+    +arrow_north(invert($body_bg))
+    top: 0
+    left: 50%
+  &.left .tooltip-arrow
+    +arrow_east(invert($body_bg))
+    top: 50%
+    right: 0
+  &.right .tooltip-arrow
+    +arrow_west(invert($body_bg))
+    top: 50%
+    left: 0
+
+.tooltip-inner
+  background-color: invert($body_bg)
+  border-radius: $radii
+  color: $body_bg
+  text-align: center
+  line-height: 1.4
+  padding: 0.25em 0.7em
+  max-width: 200px
+

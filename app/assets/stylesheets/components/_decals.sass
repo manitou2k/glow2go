@@ -1,0 +1,41 @@
+
+//~
+// Decals are used to <span class="decal important">POP</span> information in a block of text.
+// They are typically used with inline elements.
+//
+// Decal                                          | Markup
+// ---------------------------------------------- | ---------------------------
+// <span class="decal">Default</span>             | `<span class="decal">Default</span>`
+// <span class="decal info">Info</span>           | `<span class="decal info">Info</span>`
+// <span class="decal important">Important</span> | `<span class="decal important">Important</span>`
+// <span class="decal success">Success</span>     | `<span class="decal success">Success</span>`
+// <span class="decal warning">Warning</span>     | `<span class="decal warning">Warning</span>`
+// <span class="decal danger">Danger</span>       | `<span class="decal danger">Danger</span>`
+// <span class="decal primary">Primary</span>     | `<span class="decal primary">Primary</span>`
+
+.decal
+  background-color: $standard
+  border-radius: $radii
+  font-size: 85%
+  font-weight: bold
+  text-transform: uppercase
+  padding: 0.125em 0.5em
+  &.info, &.important, &.success,
+  &.warning, &.danger, &.primary
+    color: $white
+  &.info
+    background-color: $info
+  &.important
+    background-color: $important
+  &.success
+    background-color: $success
+  &.warning
+    background-color: $warning
+  &.danger
+    background-color: $danger
+  &.primary
+    background-color: $primary
+
+a.decal:hover
+  text-decoration: none
+

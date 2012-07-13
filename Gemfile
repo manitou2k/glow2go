@@ -14,6 +14,7 @@ gem "thin"
 
 gem 'mercury-rails',   git: 'git://github.com/jejacks0n/mercury.git', ref: '2e7805108dcea22175916ab6dbca2ce5eb1d64f1'
 gem 'cmsimple',        git: 'git://github.com/modeset/cmsimple.git'
+gem 'underoos',        git: 'git://github.com/modeset/underoos.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
