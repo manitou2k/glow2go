@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem "mysql2"
 gem 'jquery-rails'
+gem 'pg'
 gem "haml-rails"
 gem "jquery-rails"
 gem "spine-rails"
